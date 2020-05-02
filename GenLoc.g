@@ -331,11 +331,13 @@ GenLoc:=function(L)
          H:=Dequeue(LLH);
          x:=ChooseWisely(H,L); 
          for h in ExtensionsAtX(H,L,x) do
-            if h!.minsection=infinity then PrintTo(AuxInfo1,"\n");return h; fi;
+            # if h!.minsection=infinity then PrintTo(AuxInfo1,"\n");return h; fi;
+            if h!.minsection=infinity then Print("\n");return h; fi;
             AddUptoIso(LLH,h);
          od;
      od;
-     PrintTo(AuxInfo1,"\n");
+     # PrintTo(AuxInfo1,"\n");
+     Print("\n");
      return fail;
 end;
 
