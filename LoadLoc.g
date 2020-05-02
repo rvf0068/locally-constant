@@ -1,4 +1,4 @@
-RequirePackage("yags");
+LoadPackage("yags");
 Read("McKayToHarary.g");
 Read("graph6.g");
 Read("simplex.g");
