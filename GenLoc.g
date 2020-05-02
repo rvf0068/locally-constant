@@ -322,10 +322,12 @@ GenLoc:=function(L)
      while LLH<>[] do
          t2:=TimeInSeconds();
          if t2-t1>MaxTime then 
-            PrintTo(AuxInfo1,"\nTime out! \n");
+            # PrintTo(AuxInfo1,"\nTime out! \n");
+            Print("\nTime out! \n");
             return 3;#not enough time;
          fi; 
-         PrintTo(AuxInfo1,"Queued: ",Length(LLH)," Orders: ",Show(LLH),"            \r");
+         # PrintTo(AuxInfo1,"Queued: ",Length(LLH)," Orders: ",Show(LLH),"            \r");
+         Print("Queued: ",Length(LLH)," Orders: ",Show(LLH),"            \r");
          H:=Dequeue(LLH);
          x:=ChooseWisely(H,L); 
          for h in ExtensionsAtX(H,L,x) do
